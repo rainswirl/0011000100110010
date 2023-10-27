@@ -578,7 +578,7 @@ h6 {
 }
 
 .footer-line {
-  color: #fff;
+  color: #ffffffb9;
   position: absolute;
   bottom: 0;
   right: 40px;
@@ -586,7 +586,7 @@ h6 {
 }
 
 .footer-line:hover {
-  color: #ffffffb9;
+  color: #fff;
   transition: 0.3s;
 }
 
