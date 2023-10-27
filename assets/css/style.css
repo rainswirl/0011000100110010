@@ -16,15 +16,16 @@ h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  transition: all 0.5s;
+  transition: all 0.8s;
   z-index: 997;
   padding: 15px 0;
-  opacity: 0.9;
+  opacity: 0.7;
   background: #0d0026;
+  backdrop-filter: blur(5px);
 }
 #header:hover {
-  box-shadow: 0px 1px 20px 3px #ff92bf54;
-  transition: 0.3s;
+  box-shadow: 0px 1px 20px 3px #ff92bf1c;
+  transition: 0.8s;
 }
 
 #header.header-scrolled,
@@ -60,9 +61,14 @@ h6 {
 .navbar {
   padding: 0;
 }
+
+.logo a img {
+  transition: 0.3s;
+}
 .logo a img:hover{
 
-  box-shadow: 0px 0px 30px rgb(74 28 129);
+  filter: drop-shadow(4px 2px 20px rgb(163, 87, 255));
+  transition: 0.3s;
 }
 .navbar ul {
   margin: 0;
@@ -340,6 +346,7 @@ h6 {
   font-weight: 700;
   line-height: 56px;
   color: #fff;
+  transition: 0.3s;
 }
 #hero h1:hover {
   color: #dfdfdf;
@@ -354,16 +361,16 @@ h6 {
   background: linear-gradient(to left, #868bff 0%, #dbd2ff 50%, #b6aaff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  transition: 0.3s;
 }
 
 #hero h2:hover {
   color: rgba(255, 255, 255, 0.6);
-  margin-bottom: 50px;
-  font-size: 24px;
-  background: #9195ff;
-  background: linear-gradient(to left, #8f93ffa4 0%, #e1daffb4 50%, #bcb2ffaf 100%);
+  background: #868bff;
+  background: linear-gradient(to left, #868bff 0%, #dbd2ff 50%, #b6aaff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  opacity: 0.9;
   transition: 0.3s;
 }
 
@@ -419,6 +426,7 @@ h6 {
   font-weight: 600;
   line-height: 56px;
   color: #fff;
+  transition: 0.3s;
 }
 
 #writeAndDebug h1:hover {
@@ -431,6 +439,7 @@ h6 {
   margin-bottom: 50px;
   margin-top: 20px;
   font-size: 20px;
+  transition: 0.3s;
 }
 
 #writeAndDebug h2:hover {
@@ -469,10 +478,7 @@ h6 {
 .chromium-devtools-image-div img {
   width: 100%;
 }
-.chromium-devtools-image-div img:hover {
-  border: 1px solid #ff6cdfc2;
-  transition: 0.3s;
-}
+
 .cdt-right-side {
   padding-left: 50px;
 }
@@ -483,6 +489,7 @@ h6 {
   font-weight: 600;
   line-height: 56px;
   color: #fff;
+  transition: 0.3s;
 }
 #chromiumDevTools h1:hover {
   color: #dfdfdf;
@@ -494,6 +501,7 @@ h6 {
   margin-bottom: 50px;
   margin-top: 20px;
   font-size: 20px;
+  transition: 0.3s;
 }
 #chromiumDevTools h2:hover {
   color: rgba(255, 255, 255, 0.9);
@@ -520,6 +528,10 @@ h6 {
   transition: all 0.3s;
 }
 
+.navbar .subscribe-btn {
+  font-weight: bold;
+}
+
 #lastSection {
   width: 100%;
   background: #060118 url(./../../images/last-section.png) no-repeat center;
@@ -537,6 +549,7 @@ h6 {
 
 .center-form p {
   font-size: 30px;
+  transition: 0.3s;
 }
 
 .center-form p:hover {
@@ -570,6 +583,12 @@ h6 {
   position: absolute;
   bottom: 0;
   right: 40px;
+  transition: 0.3s;
+}
+
+.footer-line:hover {
+  color: #ffffffb9;
+  transition: 0.3s;
 }
 
 @media (max-width: 768px) {
@@ -740,11 +759,23 @@ h6 {
   .center-form input[type="text"] {
     height: 34px;
   }
-
-  .footer-line {
-    width: 100%;
-    text-align: center;
-    display: block;
-    right: 0;
-  }
 }
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #23162c;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4e3e82;
+  transition: 0.3s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7764b3;
+  transition: 0.3s;
+}
+
