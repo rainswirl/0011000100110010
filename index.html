@@ -2,15 +2,153 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>AI JS DevTools</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>AI Javascript Debugger</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <link href="assets/css/style.css" rel="stylesheet">
 </head>
 
 <body>
-    <img src="images/1.png" alt="Image 1" style="width: 100%;">
-    <script src="script.js"></script>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top ">
+        <div class="container d-flex align-items-center">
+
+            <h1 class="logo me-auto"><a href="index.html"><img src="images/logo.png" /></a></h1>
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link active" href="index.html">Home</a></li>
+                    <li><a class="nav-link" href="#">Features</a></li>
+                    <li><a class="nav-link" href="#">How it Works &nbsp;<img src="images/search-icon.png"
+                                alt="Search Icon"></a></li>
+                    <li><a class="nav-link nav-link2" href="#">FAQ</a></li>
+                    <li><a class="nav-link nav-link2" href="#">Pricing</a></li>
+                    <li><a class="nav-link nav-link2" href="#">About Us</a></li>
+                    <li><a class="nav-link nav-link2" href="#">Contact</a></li>
+                    <li><a class="nav-link subscribe-btn" href="#">Subscribe</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+
+        </div>
+    </header><!-- End Header -->
+
+    <section id="hero" class="d-flex align-items-center main-banner-bg">
+        <div class="container main-banner-section">
+            <div class="row">
+                <div class="col-lg-6 d-flex flex-column pt-4 pt-lg-0 order-2 order-lg-1 left-section-heading"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <h1>The future of AI<br />JavaScript debugging</h1>
+                    <h2>AI agent right in your Chromium devTools</h2>
+                    <div class="d-flex justify-content-lg-start subscribe-update-btn">
+                        <a href="#">Subscribe for Updates</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-flex flex-column pt-4 pt-lg-0 order-2 order-lg-1 future-ai-image-div"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <img src="images/main-bg.png" alt="Background Image" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="writeAndDebug" class="d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 d-flex flex-column pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up"
+                    data-aos-delay="200">
+                    <h1>AI that can write and debug JavaScript</h1>
+                    <h2>Uses the latest features of AI language models to interact with Chrome Devtools Protocol. Smart
+                        debugging through a range of tools: such as a VSCode extension and a Chromium Extension.
+                        Automatically sets breakpoints and evaluates the running application's state. Continuous code
+                        regeneration and debugging.</h2>
+                    <div class="d-flex justify-content-lg-start get-update-btn">
+                        <a href="#">getUpdates</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-flex flex-column pt-4 pt-lg-0 order-2 order-lg-1 write-debug-image-div"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <img src="images/write-and-debug-section.png" alt="Background Image" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="chromiumDevTools" class="align-items-center">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 d-flex flex-column pt-4 pt-lg-0 order-2 order-lg-1 chromium-devtools-image-div"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <img src="images/chromium-section-img.png" alt="Background Image" />
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 d-flex flex-column pt-4 pt-lg-0 order-2 order-lg-1 cdt-right-side" data-aos="fade-up"
+                    data-aos-delay="200">
+                    <h1>Connects directly to Chromium devTools</h1>
+                    <h2>Takes on the debugging process for you</h2>
+                    <div class="d-flex justify-content-lg-start subscribe-btn">
+                        <a href="#">Subscribe</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="lastSection" class="d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="center-form">
+                    <p>
+                        Leave your email to be the first to know when it’s released
+                    </p>
+                    <input type="text" class="form-control">
+                    <input type="submit" value="Subscribe"/>
+                </div>
+            </div>
+        </div>
+        <p class="footer-line">_images generated with DALL·E 3</p>
+    </section>
+
+    </main><!-- End #main -->
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+
 </body>
 
 </html>
