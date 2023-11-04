@@ -255,7 +255,25 @@
     });
   });
 
-  window.addEventListener("scroll", function () {
-  }, true);
+  window.addEventListener("scroll", positionParagraph, true);
+
+    // Function to calculate and update the position of the paragraph
+    function positionParagraph() {
+      // Get the image by class name
+      var img = document.querySelector('.background4');
+      // Get the paragraph by class name
+      var p = document.querySelector('.footer-line');
+      
+      // Calculate the position of the paragraph
+      var rect = img.getBoundingClientRect();
+      p.style.top = `${rect.bottom - p.offsetHeight}px`; // Align bottom edge with the bottom of the image
+      p.style.zIndex = 100000;
+    }
+  
+    // Run the function on DOM content load
+    document.addEventListener('DOMContentLoaded', positionParagraph, true);
+  
+    // Optional: If you need the paragraph to remain positioned correctly when the window is resized
+    window.addEventListener('resize', positionParagraph, true);
 
 })()

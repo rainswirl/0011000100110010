@@ -2,6 +2,7 @@ body {
   font-family: "Raleway", sans-serif;
   color: #444444;
   background: #00081b;
+  overflow:hidden;
 }
 
 h1,
@@ -713,6 +714,7 @@ h6 {
   color: #ffffffb9;
   position: absolute;
   bottom: 20px;
+  right: 20px;
   z-index: 100000;
 }
 
