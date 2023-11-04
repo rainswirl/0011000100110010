@@ -256,31 +256,6 @@
   });
 
   window.addEventListener("scroll", function () {
-    let scrollPosition = window.scrollY;
-    let textElement = document.querySelector(".moving-text");
-    let offset = (scrollPosition / -7) + "px";
-    textElement.style.transform = "translateX(" + offset + ")";
-  });
-
-  window.addEventListener("scroll", function () {
-    let scrollPosition = window.scrollY;
-    let textElement = document.querySelector(".moving-text1");
-    let offset = (scrollPosition / -40) + "px";
-    textElement.style.transform = "translateX(" + offset + ")";
-  });
-
-  window.addEventListener("scroll", function () {
-    let scrollPosition = window.scrollY;
-    let textElement = document.querySelector(".moving-text2");
-    let offset = (scrollPosition / -65) + "px";
-    textElement.style.transform = "translateX(" + offset + ")";
-  });
-
-  window.addEventListener("scroll", function () {
-    let scrollPosition = window.scrollY;
-    let textElement = document.querySelector(".moving-text3");
-    let offset = (scrollPosition / -5) + "px";
-    textElement.style.transform = "translateY(" + offset + ")";
-  });
+  }, true);
 
 })()

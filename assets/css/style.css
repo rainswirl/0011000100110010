@@ -712,10 +712,8 @@ h6 {
 .footer-line {
   color: #ffffffb9;
   position: absolute;
-  transform: translate(-50%, 100%) scale(1.1);
-  margin-top: 70%;
-  margin-left: 70%;
-  width: 280px;
+  bottom: 20px;
+  z-index: 100000;
 }
 
 .footer-line:hover {
@@ -936,14 +934,6 @@ h6 {
     margin-top: 1030px;
     margin-left: 50%;
   }
-  .footer-line {
-    color: #ffffffb9;
-    position: absolute;
-    transform: translate(-50%, 100%) scale(1.1);
-    margin-top: 40%;
-    margin-left: 70%;
-    width: 280px;
-  }
 
   .data {
     position: relative;
@@ -1061,16 +1051,6 @@ h6 {
     margin-left: 50%;
   }
 
-  .footer-line {
-    color: #ffffffb9;
-    position: absolute;
-    transform: translate(0%, 100%) scale(1.1);
-    margin-top: 50%;
-    margin-left: 0%;
-    width: 100%;
-    text-align: center;
-  }
-
   .data {
     position: relative;
     width: 100%;
@@ -1176,16 +1156,6 @@ h6 {
 
   .moving-text2 {
     left: 0;
-  }
-
-  .footer-line {
-    color: #ffffffb9;
-    position: absolute;
-    transform: translate(0%, 100%) scale(1.1);
-    margin-top: 50%;
-    margin-left: 0%;
-    width: 100%;
-    text-align: center;
   }
 
   .parallax-img5 {
