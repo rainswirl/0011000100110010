@@ -757,6 +757,8 @@ h6 {
   transform: translate(-50%, 100%);
   margin-left: 96%;
   padding-bottom: 20px;
+  white-space: nowrap;
+  color: rgb(197, 197, 197); 
 }
 
 .content4 {
