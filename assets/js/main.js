@@ -255,32 +255,22 @@
     });
   });
 
-  window.addEventListener("scroll", function () {
-    let scrollPosition = window.scrollY;
-    let textElement = document.querySelector(".moving-text");
-    let offset = (scrollPosition / -7) + "px";
-    textElement.style.transform = "translateX(" + offset + ")";
-  });
+  function handleScrollEvent(event) {
+    const bottomImage = document.getElementsByClassName('background4')[0];
+    const footerLine = document.getElementsByClassName('background5')[0];
+    const rect = bottomImage.getBoundingClientRect();
 
-  window.addEventListener("scroll", function () {
-    let scrollPosition = window.scrollY;
-    let textElement = document.querySelector(".moving-text1");
-    let offset = (scrollPosition / -40) + "px";
-    textElement.style.transform = "translateX(" + offset + ")";
-  });
+    const bottom = rect.bottom;
+    const height = rect.height;
 
-  window.addEventListener("scroll", function () {
-    let scrollPosition = window.scrollY;
-    let textElement = document.querySelector(".moving-text2");
-    let offset = (scrollPosition / -65) + "px";
-    textElement.style.transform = "translateX(" + offset + ")";
-  });
+    console.log(bottom, rect.height);
 
-  window.addEventListener("scroll", function () {
-    let scrollPosition = window.scrollY;
-    let textElement = document.querySelector(".moving-text3");
-    let offset = (scrollPosition / -5) + "px";
-    textElement.style.transform = "translateY(" + offset + ")";
-  });
+    const windowHeight = window.innerHeight;
 
+    footerLine.style.bottom = `${Math.min((bottom - windowHeight + 20), 400)}px`;
+  }
+
+  window.addEventListener('resize', handleScrollEvent, true);
+  window.addEventListener('DOMContentLoaded', handleScrollEvent, true);
+  window.addEventListener('scroll', handleScrollEvent, true);
 })()

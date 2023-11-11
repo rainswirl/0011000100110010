@@ -2,6 +2,7 @@ body {
   font-family: "Raleway", sans-serif;
   color: #444444;
   background: #00081b;
+  overflow: hidden;
 }
 
 h1,
@@ -712,11 +713,6 @@ h6 {
   width: 280px;
 } */
 
-.footer-line:hover {
-  color: #fff;
-  transition: 0.3s;
-}
-
 .inner-sction-3 {
   display: flex;
 }
@@ -747,17 +743,17 @@ h6 {
 
 /* FOOTER-LINE */
 .background5 {
-  /* right: -35%;
-  bottom: -150%;
-  display: block;
-  position: relative;
-  transform: unset; */
-
-  margin-top: 3200px;
-  transform: translate(-50%, 100%);
-  margin-left: 96%;
-  padding-bottom: 20px;
   white-space: nowrap;
+  position:absolute;
+  right: 20px;
+  bottom: 0px;
+  color: #b2b2b2;
+  transition: all 0.3s;
+}
+
+.background5:hover {
+  color: #fff;
+  transition: all 0.3s;
 }
 
 .content4 {
