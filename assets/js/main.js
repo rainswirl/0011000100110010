@@ -255,23 +255,20 @@
     });
   });
 function handleScrollEvent(event) {
-
+  // requestAnimationFrame to ensure the code runs in sync with the browser's repaints
+  requestAnimationFrame(() => {
     const bottomImage = document.getElementsByClassName('background4')[0];
     const footerLine = document.getElementsByClassName('background5')[0];
     const rect = bottomImage.getBoundingClientRect();
 
     const bottom = rect.bottom;
-    const height = rect.height;
-
-    // Ensure that 'windowHeight' is not redeclared if already in scope
     const windowHeight = window.innerHeight;
 
     const bottomStyle = (bottom - windowHeight) * 2.1 + 20;
 
-    // Corrected the ternary operation by removing extra parentheses and using 'bottom - windowHeight' directly
     const bottomStyleFinal = bottomStyle > (windowHeight * 0.5 - (bottom - windowHeight)) 
-                               ? (windowHeight * 0.5 - (bottom - windowHeight))
-                               : bottomStyle;
+                              ? (windowHeight * 0.5 - (bottom - windowHeight))
+                              : bottomStyle;
 
     footerLine.style.bottom = `${bottomStyleFinal}px`;
 
@@ -282,8 +279,9 @@ function handleScrollEvent(event) {
       bottomStyle: bottomStyle,
       bottomStyleFinal: bottomStyleFinal
     });
-
+  });
 }
+
 
 
   window.addEventListener('resize', handleScrollEvent, true);
