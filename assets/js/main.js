@@ -272,12 +272,14 @@ function handleScrollEvent(event) {
 
     footerLine.style.bottom = `${bottomStyleFinal}px`;
 
+    const footerBottom = footerLine.getBoundingClientRect().bottom;
+    const distance = bottom - footerBottom;
+
     console.log({
-      bottom: bottom,
-      rectHeight: rect.height,
       bottomMinusWindowHeight: bottom - windowHeight,
       bottomStyle: bottomStyle,
-      bottomStyleFinal: bottomStyleFinal
+      bottomStyleFinal: bottomStyleFinal,
+      distance
     });
   });
 }
