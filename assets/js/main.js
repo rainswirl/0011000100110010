@@ -259,7 +259,7 @@ function handleScrollEvent(event) {
   const scaleFactor = window.devicePixelRatio || 1;
 
   // requestAnimationFrame to ensure the code runs in sync with the browser's repaints
-  requestAnimationFrame(() => {
+  // requestAnimationFrame(() => {
     const bottomImage = document.getElementsByClassName('background4')[0];
     const footerLine = document.getElementsByClassName('background5')[0];
     const rect = bottomImage.getBoundingClientRect();
@@ -270,23 +270,29 @@ function handleScrollEvent(event) {
     // Adjust calculation using the scale factor
     const bottomStyle = (bottom - windowHeight) * (2.1) + (20 / scaleFactor);
 
-    const bottomStyleFinal = bottomStyle > (windowHeight * 0.25 - (bottom - windowHeight))
+    let bottomStyleFinal = bottomStyle > (windowHeight * 0.25 - (bottom - windowHeight))
                               ? (windowHeight * 0.25 - (bottom - windowHeight))
                               : bottomStyle;
 
-    footerLine.style.bottom = `${Math.round(bottomStyleFinal)}px`;
 
     const footerBottom = footerLine.getBoundingClientRect().bottom;
     // Adjust calculation using the scale factor
-    const distance = (bottom - footerBottom) / scaleFactor;
+    const distance = (bottom - footerBottom);
+
+    
+    bottomStyleFinal = distance < 0 ? bottomStyleFinal - distance : bottomStyleFinal;
+
+    footerLine.style.bottom = `${Math.round(bottomStyleFinal)}px`;
+
+
 
     console.log({
-      bottomMinusWindowHeight: (bottom - windowHeight) / scaleFactor,
-      bottomStyle: bottomStyle / scaleFactor,
-      bottomStyleFinal: bottomStyleFinal / scaleFactor,
+      bottomMinusWindowHeight: (bottom - windowHeight),
+      bottomStyle: bottomStyle,
+      bottomStyleFinal: bottomStyleFinal,
       distance
     });
-  });
+  // });
 }
 
 
