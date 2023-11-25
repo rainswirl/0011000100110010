@@ -749,6 +749,7 @@ h6 {
   bottom: 0px;
   color: #b2b2b2;
   transition: color 0.3s;
+  transform: translate3d(0,0,0);
 }
 
 .background5:hover {

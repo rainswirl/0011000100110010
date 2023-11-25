@@ -274,7 +274,7 @@ function handleScrollEvent(event) {
                               ? (windowHeight * 0.25 - (bottom - windowHeight))
                               : bottomStyle;
 
-    footerLine.style.bottom = `${bottomStyleFinal}px`;
+    footerLine.style.bottom = `${Math.round(bottomStyleFinal)}px`;
 
     const footerBottom = footerLine.getBoundingClientRect().bottom;
     // Adjust calculation using the scale factor
