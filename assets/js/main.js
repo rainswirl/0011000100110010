@@ -255,6 +255,9 @@
     });
   });
 function handleScrollEvent(event) {
+  // devicePixelRatio takes into account the device's scale factor
+  const scaleFactor = window.devicePixelRatio || 1;
+
   // requestAnimationFrame to ensure the code runs in sync with the browser's repaints
   requestAnimationFrame(() => {
     const bottomImage = document.getElementsByClassName('background4')[0];
@@ -264,21 +267,23 @@ function handleScrollEvent(event) {
     const bottom = rect.bottom;
     const windowHeight = window.innerHeight;
 
-    const bottomStyle = (bottom - windowHeight) * 2.1 + 20;
+    // Adjust calculation using the scale factor
+    const bottomStyle = (bottom - windowHeight) * (2.1 * scaleFactor) + (20 * scaleFactor);
 
-    const bottomStyleFinal = bottomStyle > (windowHeight * 0.25 - (bottom - windowHeight)) 
-                              ? (windowHeight * 0.25 - (bottom - windowHeight))
+    const bottomStyleFinal = bottomStyle > (windowHeight * 0.25 * scaleFactor - (bottom - windowHeight))
+                              ? (windowHeight * 0.25 * scaleFactor - (bottom - windowHeight))
                               : bottomStyle;
 
     footerLine.style.bottom = `${bottomStyleFinal}px`;
 
     const footerBottom = footerLine.getBoundingClientRect().bottom;
-    const distance = bottom - footerBottom;
+    // Adjust calculation using the scale factor
+    const distance = (bottom - footerBottom) / scaleFactor;
 
     console.log({
-      bottomMinusWindowHeight: bottom - windowHeight,
-      bottomStyle: bottomStyle,
-      bottomStyleFinal: bottomStyleFinal,
+      bottomMinusWindowHeight: (bottom - windowHeight) / scaleFactor,
+      bottomStyle: bottomStyle / scaleFactor,
+      bottomStyleFinal: bottomStyleFinal / scaleFactor,
       distance
     });
   });
