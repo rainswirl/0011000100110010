@@ -254,8 +254,8 @@
       mirror: false
     });
   });
+function handleScrollEvent(event) {
 
-  function handleScrollEvent(event) {
     const bottomImage = document.getElementsByClassName('background4')[0];
     const footerLine = document.getElementsByClassName('background5')[0];
     const rect = bottomImage.getBoundingClientRect();
@@ -263,24 +263,28 @@
     const bottom = rect.bottom;
     const height = rect.height;
 
+    // Ensure that 'windowHeight' is not redeclared if already in scope
     const windowHeight = window.innerHeight;
 
     const bottomStyle = (bottom - windowHeight) * 2.1 + 20;
 
-    const bottomStyleFinal = bottomStyle > ((windowHeight * 0.5 - (((bottom - windowHeight))))) ? ((windowHeight * 0.5 - (((bottom - windowHeight))))) : bottomStyle;
-    // footerLine.style.bottom = `${bottomStyle > windowHeight * 0.4 ? (windowHeight * 0.4 - (bottomStyle - windowHeight * 0.4)) : bottomStyle}px`;
+    // Corrected the ternary operation by removing extra parentheses and using 'bottom - windowHeight' directly
+    const bottomStyleFinal = bottomStyle > (windowHeight * 0.5 - (bottom - windowHeight)) 
+                               ? (windowHeight * 0.5 - (bottom - windowHeight))
+                               : bottomStyle;
+
     footerLine.style.bottom = `${bottomStyleFinal}px`;
 
     console.log({
-      bottom: bottom,             // Represents the bottom position value of an element
-      rectHeight: rect.height,    // Height of the DOMRect object associated with an element
-      bottomMinusWindowHeight: bottom - windowHeight,  // Difference between the bottom position and the window's height
-      bottomStyle: bottomStyle,   // Bottom style property before adjustment (e.g., initial CSS value)
-      bottomStyleFinal: bottomStyleFinal  // Final calculated bottom style property (e.g., after some manipulation)
+      bottom: bottom,
+      rectHeight: rect.height,
+      bottomMinusWindowHeight: bottom - windowHeight,
+      bottomStyle: bottomStyle,
+      bottomStyleFinal: bottomStyleFinal
     });
 
+}
 
-  }
 
   window.addEventListener('resize', handleScrollEvent, true);
   window.addEventListener('DOMContentLoaded', handleScrollEvent, true);
