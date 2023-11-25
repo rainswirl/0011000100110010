@@ -263,11 +263,23 @@
     const bottom = rect.bottom;
     const height = rect.height;
 
-    console.log(bottom, rect.height);
-
     const windowHeight = window.innerHeight;
 
-    footerLine.style.bottom = `${Math.min((bottom - windowHeight + 20), 400)}px`;
+    const bottomStyle = (bottom - windowHeight) * 2.1 + 20;
+
+    const bottomStyleFinal = bottomStyle > ((windowHeight * 0.5 - (((bottom - windowHeight))))) ? ((windowHeight * 0.5 - (((bottom - windowHeight))))) : bottomStyle;
+    // footerLine.style.bottom = `${bottomStyle > windowHeight * 0.4 ? (windowHeight * 0.4 - (bottomStyle - windowHeight * 0.4)) : bottomStyle}px`;
+    footerLine.style.bottom = `${bottomStyleFinal}px`;
+
+    console.log({
+      bottom: bottom,             // Represents the bottom position value of an element
+      rectHeight: rect.height,    // Height of the DOMRect object associated with an element
+      bottomMinusWindowHeight: bottom - windowHeight,  // Difference between the bottom position and the window's height
+      bottomStyle: bottomStyle,   // Bottom style property before adjustment (e.g., initial CSS value)
+      bottomStyleFinal: bottomStyleFinal  // Final calculated bottom style property (e.g., after some manipulation)
+    });
+
+
   }
 
   window.addEventListener('resize', handleScrollEvent, true);

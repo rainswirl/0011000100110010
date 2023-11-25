@@ -748,12 +748,12 @@ h6 {
   right: 20px;
   bottom: 0px;
   color: #b2b2b2;
-  transition: all 0.3s;
+  transition: color 0.3s;
 }
 
 .background5:hover {
   color: #fff;
-  transition: all 0.3s;
+  transition: color 0.3s;
 }
 
 .content4 {
