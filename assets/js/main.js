@@ -266,8 +266,8 @@ function handleScrollEvent(event) {
 
     const bottomStyle = (bottom - windowHeight) * 2.1 + 20;
 
-    const bottomStyleFinal = bottomStyle > (windowHeight * 0.5 - (bottom - windowHeight)) 
-                              ? (windowHeight * 0.5 - (bottom - windowHeight))
+    const bottomStyleFinal = bottomStyle > (windowHeight * 0.25 - (bottom - windowHeight)) 
+                              ? (windowHeight * 0.25 - (bottom - windowHeight))
                               : bottomStyle;
 
     footerLine.style.bottom = `${bottomStyleFinal}px`;
