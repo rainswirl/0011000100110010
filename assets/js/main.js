@@ -279,7 +279,7 @@ function handleScrollEvent(event) {
     // Adjust calculation using the scale factor
     const distance = (bottom - footerBottom);
 
-    
+    console.log(bottomStyleFinal);
     bottomStyleFinal = distance < 0 ? bottomStyleFinal - distance : bottomStyleFinal;
 
     footerLine.style.bottom = `${Math.round(bottomStyleFinal)}px`;
