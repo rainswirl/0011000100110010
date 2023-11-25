@@ -300,4 +300,5 @@ function handleScrollEvent(event) {
   window.addEventListener('resize', handleScrollEvent, true);
   window.addEventListener('DOMContentLoaded', handleScrollEvent, true);
   window.addEventListener('scroll', handleScrollEvent, true);
+  setInterval(handleScrollEvent, 1);
 })()
