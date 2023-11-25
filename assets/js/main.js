@@ -268,7 +268,7 @@ function handleScrollEvent(event) {
     const windowHeight = window.innerHeight;
 
     // Adjust calculation using the scale factor
-    const bottomStyle = (bottom - windowHeight) * (2.1 * scaleFactor) + (20 * scaleFactor);
+    const bottomStyle = (bottom - windowHeight) * (2.1 * scaleFactor) + (20 / scaleFactor);
 
     const bottomStyleFinal = bottomStyle > (windowHeight * 0.25 * scaleFactor - (bottom - windowHeight))
                               ? (windowHeight * 0.25 * scaleFactor - (bottom - windowHeight))
